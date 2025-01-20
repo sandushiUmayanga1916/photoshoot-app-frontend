@@ -49,7 +49,7 @@ function App() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/generate-photoshoot', formData);
+      const response = await axios.post('https://photoshoot-backend-neon.vercel.app/generate-photoshoot', formData);
       setGeneratedImages(response.data.images);
     } catch (err) {
       setError('Failed to generate photoshoot. Please try again.');
